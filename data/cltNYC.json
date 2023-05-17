@@ -1,0 +1,100 @@
+[
+	{
+	  "CLT_Organization": "Northwest Bronx Community and Clergy Coalition",
+	  "Address": "103 E 196th St, Bronx, NY 10468",
+	  "LandStatus": "Land Transfer in Process",
+	  "Latitude": 40.8685,
+	  "Longitude": -73.8937
+	},
+	{
+	  "CLT_Organization": "Mary Mitchell Center",
+	  "Address": "2007 Mapes Ave, Bronx, NY 10460",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.84481,
+	  "Longitude": -73.8873
+	},
+	{
+	  "CLT_Organization": "We Stay/Nos Quedamos",
+	  "Address": "754 Melrose Ave, Bronx, NY 10451",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.8213,
+	  "Longitude": -73.9152
+	},
+	{
+	  "CLT_Organization": "Mott Haven-Port Morris Community Land Stewards",
+	  "Address": "1163 Manor Ave, Bronx, New York, 10472",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.82847,
+	  "Longitude": -73.8764
+	},
+	{
+	  "CLT_Organization": "Northern Manhattan CLT",
+	  "Address": "630 Isham St, New York, NY 10034",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.86959,
+	  "Longitude": -73.9209
+	},
+	{
+	  "CLT_Organization": "East Harlem/El Barrio CLT",
+	  "Address": "415 E 117th St, New York, NY 10035",
+	  "LandStatus": "Owns Land",
+	  "Latitude": 40.79668,
+	  "Longitude": -73.9346
+	},
+	{
+	  "CLT_Organization": "Cooper Square CLT",
+	  "Address": "61 E 4th St, New York, NY 10003",
+	  "LandStatus": "Owns Land",
+	  "Latitude": 40.72688,
+	  "Longitude": -73.9908
+	},
+	{
+	  "CLT_Organization": "Chinatown CLT",
+	  "Address": "217 Park Row #9, New York, NY 10038",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.71322,
+	  "Longitude": -73.9986
+	},
+	{
+	  "CLT_Organization": "Western Queens CLT",
+	  "Address": "41-07 42nd St, Queens, NY 11104",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.74679,
+	  "Longitude": -73.9216
+	},
+	{
+	  "CLT_Organization": "Chhaya CDC",
+	  "Address": "37-43 77th St, 2nd floor, Jackson Heights, NY 11372",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.74796,
+	  "Longitude": -73.8887
+	},
+	{
+	  "CLT_Organization": "Brooklyn Level Up",
+	  "Address": "1623 Flatbush Avenue, Ste 190, Brooklyn, NY 11210",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.63097,
+	  "Longitude": -73.9454
+	},
+	{
+	  "CLT_Organization": "Brownsville CLT",
+	  "Address": "519 Rockaway Avenue, 4th floor, Brooklyn, NY 11212",
+	  "LandStatus": "Land Transfer in Process",
+	  "Latitude": 40.66747,
+	  "Longitude": -73.91
+	},
+	{
+	  "CLT_Organization": "East New York CLT",
+	  "Address": "2966 Fulton St, Brooklyn, NY 11208",
+	  "LandStatus": "Advocating for Land",
+	  "Latitude": 40.67966,
+	  "Longitude": -73.8852
+	},
+	{
+	  "CLT_Organization": "ReAL Edgemere CLT",
+	  "Address": "357 Beach 43rd St, Queens, NY 11691",
+	  "LandStatus": "Land Transfer in Process",
+	  "Latitude": 40.59555008,
+	  "Longitude": -73.77506146
+	}
+   ]

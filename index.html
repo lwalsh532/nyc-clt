@@ -1,0 +1,453 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Community Land Trusts in NYC</title>
+
+  <!-- add a favicon which will appear in browser tabs -->
+  <link rel="shortcut icon" href="./images/favicon.ico">
+
+  <!-- CSS for google fonts, bootstrap, mapboxgl, mapboxgl geocoder, local styles // copied from example-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <div id='main-container'>
+    <div id='main-container'>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark "
+        style="background-color:#7c1b1b;border-bottom: 1px solid #5e5e5e;">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+
+          <!-- Navbar brand -->
+          <div class="navbar-brand" href="#"><i class="fa-solid fa-people-roof"></i><b>The People's Land in the People's
+              Hands</b></div>
+
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- Link -->
+            </ul>
+
+            <!-- Icons (these will show up on the right) -->
+            <ul class="navbar-nav d-flex flex-row me-1">
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/lwalsh532" target='_blank' rel='noopener noreferrer'><i
+                    class="fab fa-github"></i></a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <div class='content-area'>
+        <div class='sidebar'>
+          <div class='sidebar-top'>
+            <!-- sidebar with main content/intro content and list of buttons to flyto gardens  -->
+            <div id='main-sidebar-content'>
+              <h3>Community Land Trusts in New York City</h3>
+              <p><small> <br></br><b>Community Land Trusts (CLTs)</b> are non-proft, democratically governed
+                  organizations that owns and preserves land in a given neighborhood on behalf of the community,
+                  according to the <b><a
+                      href='https://nyccli.org/resources/clts-and-mhas-frequently-asked-questions/'>NYC
+                      Community Land
+                      Initiative</a></b>.
+                  Housing,
+                  public gardens, community space, commerical use, and environmental justice preservation are primary
+                  examples of how CLTs are used within the United States, and New York City in particular.
+                  I have gathered a list of Community Land Trusts, partnered with the NYC
+                  Community Land
+                  Initiative, and created an interactive map in order for you all to learn more about the inspiring
+                  work
+                  of CLTs in New York City!</small>
+                <medium><br></br><b>Scroll and Click</b></medium> <small>on a
+                  Community Land
+                  Trust from the list below to learn more about each organization.</small> <medium><b>Click</b></medium> <small>on a marker on the map to see if the CLT owns land as of 2023.
+                  </small>
+              </p>
+              <!-- buttons -->
+              <!-- buttons flyto and also will show more detailed info in the sidebar>
+             <p></p> -->
+              <h4> Bronx </h4>
+              <button id='NWBCCC' class='button-52'>
+                <div role="button"> Northwest Bronx Community and Clergy Coalition </div>
+              </button>
+              <p></p>
+              <button id='MMC' class='button-52'>
+                <div role="button"> Mary Mitchell Center </div>
+              </button>
+              <p></p>
+              <button id='WSNQ' class="button-52">
+                <div role="button"> We Stay/Nos Quedamos </div>
+              </button>
+              <p></p>
+              <button id='MHPM' class='button-52'>
+                <div role="button"> Mott Haven-Port Morris Community Land Stewards </div>
+              </button>
+              <p></p>
+              <h4> Manhattan </h4>
+              <button id='NMCLT' class='button-52'>
+                <div role="button"> Northern Manhattan CLT </div>
+              </button>
+              <p></p>
+              <button id='EBCLT' class='button-52'>
+                <div role="button"> East Harlem/El Barrio CLT </div>
+              </button>
+              <p></p>
+              <button id='CSCLT' class='button-52'>
+                <div role="button"> Cooper Square CLT </div>
+              </button>
+              <p></p>
+              <button id='Chinatown' class='button-52'>
+                <div role="button"> Chinatown CLT </div>
+              </button>
+              <p></p>
+              <h4> Queens </h4>
+              <button id='WQCLT' class='button-52'>
+                <div role="button"> Western Queens CLT </div>
+              </button>
+              <p></p>
+              <button id='Chhaya' class='button-52'>
+                <div role="button"> Chhaya CDC </div>
+              </button>
+              <p></p>
+              <button id='realCLT' class='button-52'>
+                <div role="button"> ReAL CLT </div>
+              </button>
+              <p></p>
+              <h4> Brooklyn </h4>
+              <button id='BKLVLUP' class='button-52'>
+                <div role="button"> Brookyln Level Up </div>
+              </button>
+              <p></p>
+              <button id='Brownsville' class='button-52'>
+                <div role="button"> Brownsville CLT </div>
+              </button>
+              <p></p>
+              <button id='ENYCLT' class='button-52'>
+                <div role="button"> East New York CLT </div>
+              </button>
+              <p></p>
+              <h4> ... </h4>
+            </div>
+            <!-- sidebar info specific to each garden that will replace main content when button is clicked -->
+            <div id='variable-sidebar-content-NWBCCC' class='variable-sidebar'>
+              <h4>Northwest Bronx Community and Clergy Coalition<h4>
+                  <p></p>
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/5a2021c5e5dd5b3a4dda00d4/a42a1e2b-8473-45c1-8679-361da5069039/IMG_2552.jpg">
+                  <p></p>
+                  <p>In January of 2020, the Northwest Bronx Community and Clergy Coalition founded the Bronx
+                    Community
+                    Land Trust. The stated mission of Bronx CLT is to, “build and preserve safe, healthy, and deeply
+                    affordable housing for the borough’s racially and economically diverse residents as well as
+                    accessible commercial, industrial, and green spaces. The Bronx CLT advances community leadership,
+                    shared wealth, and collective governance over our Bronx land to create long-term sustainability,
+                    responsible planning, and equitable development that prevents displacement and gentrification.”
+                    The
+                    Bronx CLT has identified 26 vacant properties in the Bronx wishing to be brought under the CLT,
+                    but
+                    have not acquired ownership of the land thus far. Find out more <b><a
+                        href='https://www.northwestbronx.org/bronxclt'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-MMC' class='variable-sidebar'>
+              <h4>Mary Mitchell Center<h4>
+                  <p></p>
+                  <img src='https://www.bxtimes.com/wp-content/uploads/2014/10/43-youth-2014-10-24-bx01_z.jpg'>
+                  <p></p>
+                  <p>Founded in 1997, the stated mission of the Mary Mitchell Center is to, “improve the lives of
+                    youth
+                    and
+                    families living in the Crotona section of the Bronx through programs that expand opportunities,
+                    develop
+                    leadership, and build community.” Owning several properties within Crotona, the Center created La
+                    Familia
+                    Verde, a coalition of gardens in the Crotona, East Tremont, and West Farms neighborhoods of The
+                    Bronx, in
+                    1998. The Center is currently pursuing to bring more properties and homes within a CLT model. Find
+                    out
+                    more <b><a href='https://themarymitchellfyc.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-WSNQ' class='variable-sidebar'>
+              <h4>We Stay/Nos Quedamos<h4>
+                  <p></p>
+                  <img src="https://www.wholecitiesfoundation.org/app/uploads/2021/09/WeStay.jpeg">
+                  <p></p>
+                  <p>Founded in 1993, the mission of Nos Quedamos is a commitment to, “our [the community’s]
+                    collective
+                    self-determination.” As a South Bronx-based CDC, the coalition is dedicated to the creation of
+                    a
+                    Community Land Trust for the South Bronx. As of 2023, the organization is yet to hold land,
+                    yet
+                    their mission stands: “We Stay, We Welcome, We Build.” Find out more <b><a
+                        href='https://www.nosquedamos.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-MHPM' class='variable-sidebar'>
+              <h4>Mott Haven-Port Morris Community Land Stewards<h4>
+                  <p></p>
+                  <img src='https://sbxclt.org/images/HeartsPhoto.jpeg'>
+                  <p></p>
+                  <p>Founded in 2015 by the coalition South Bronx Unite, the Mott Haven-Port Morris Community Land
+                    Stewards mission statement is to, “acquire and hold in perpetuity real property to ensure that
+                    community members preserve a stake in a neighborhood profoundly impacted by decades of
+                    environmental injustice and economic neglect.” A major campaign for the organization is to
+                    convert the currently vacant, publicly-owned Lincoln Detox Center, “into a center for health
+                    (H), education (E) and the arts (ARTS) – H.E.ARTS,” to which the organization has created a
+                    feasibility report. Find out more <b><a
+                        href='https://www.southbronxunite.org/hearts-health-education-the-arts-center'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-NMCLT' class='variable-sidebar'>
+              <h4>Northern Manhattan CLT<h4>
+                  <p></p>
+                  <img
+                    src='https://i0.wp.com/northstarfund.org/wp-content/uploads/2018/03/Northern_Manhattan_Not_For_Sale_at_demo_full_800.jpg?fit=800%2C400&ssl=1'>
+                  <p></p>
+                  <p>Founded in 2022, the purpose of Northern Manhattan CLT is to “create sustainable, affordable, and
+                    community-controlled housing while allowing residents to become financially stable.” The goal of
+                    the
+                    organization thus far is to "improve the collective life of the community by fostering the
+                    holistic
+                    cultural and economic development of people and organizations, and of the environment" as well as
+                    "anchor working class people, immigrants, and people of color against displacement." As of 2023,
+                    the
+                    organization is yet to hold land in New York City. Find out more <b><a
+                        href='https://www.facebook.com/NMCLT/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-EBCLT' class='variable-sidebar'>
+              <h4>East Harlem/El Barrio CLT<h4>
+                  <p></p>
+                  <img src='https://ehebclt.nyc/wp-content/uploads/2022/08/unnamed2.png'>
+                  <p></p>
+                  <p>Founded in 2014, the East Harlem/El Barrio CLT’s stated mission is, “to develop and preserve
+                    community-controlled, truly and permanently affordable housing, commercial, green and cultural
+                    spaces,” in the neighborhood. Further, the organization targets low-income to extremely low-income
+                    residents as prioritized beneficiaries of the land trust. In 2020, Land Trust became the first CLT
+                    across New York City to win publicly-owned land. Following the purchase of four buildings for $1
+                    each from the New York City Department of Housing Preservation and Development (HPD), the Land
+                    Trust
+                    partnered with Banana Kelly and Community Assisted, Tenant Controlled Housing (CATCH) to convert
+                    the
+                    developments into tenant-run, permanently affordable dwellings. Following the construction and
+                    conversion process, the four buildings will be utilized as 38 permanently affordable apartments
+                    and
+                    3 affordable commercial and community spaces. Sixteen of the properties will be available to
+                    residents at-or-below 35% of the area median income, and four of the properties will be reserved
+                    for
+                    people transitioning from homelessness. East Harlem/El Barrio CLT continues to advocate for other
+                    community land-oriented policies such as public land disposition, the Tenant Opportunity to
+                    Purchase
+                    Act (TOPA), abolishing the NYC tax lien sale, and deepened city affordability requirements. Find
+                    out
+                    more <b><a href='https://ehebclt.nyc/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-CSCLT' class='variable-sidebar'>
+              <h4>Cooper Square CLT<h4>
+                  <p></p>
+                  <img
+                    src='https://coopersquare.org/wp-content/uploads/2020/10/cropped-Cooper-Square-is-here-to-stay.jpg'>
+                  <p></p>
+                  <p>Founded in 1991, the Cooper Square CLT is the oldest community land trust in New York City.
+                    Located
+                    in the historic Lower East Side neighborhood of Manhattan, the Cooper Square CLT’s stated mission
+                    is
+                    to, “protect the homes, small businesses, and community spaces within our service area against
+                    land
+                    speculation and support the very fabric of a neighborhood where residents have been traditionally
+                    disenfranchised by both disinvestment and gentrification.” The CLT is a steward for two projects:
+                    the Cooper Square Mutual Housing Association (CSMHA II) and the Two Buildings Tenants United
+                    (TBTU).
+                    The CSMHA was formed in 1995. It consists of 21 buildings, with 328 units, permanently affordable
+                    to
+                    low-income residents. The TBTU is a recent project for Cooper Square CLT. In 2019, the New York
+                    City
+                    Department of Housing Preservation and Development (HPD) approached Cooper Square to take over the
+                    two rent-stabilized buildings, with 18 units each, in order to avoid foreclosure. Cooper Square
+                    CLT
+                    began to also provide renovations to the existing conditions for tenants and continues to assist
+                    tenants’ needs within the TBTU. Find out more <b><a
+                        href='https://www.coopersquareclt.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-Chinatown' class='variable-sidebar'>
+              <h4>Chinatown CLT<h4>
+                  <p></p>
+                  <img src='https://www.liberationnews.org/wp-content/uploads/2021/09/IMG_1699-780x470.jpg'>
+                  <p></p>
+                  <p>Founded in 2019, as a part of the New York City Community Land Initiative’s $750,000 budget
+                    awarded
+                    by New York City Council, Chinatown CLT is an educational campaign to raise awareness of the
+                    concept
+                    of a Community Land Trust for the Chinatown neighborhood of Manhattan. The initiative’s mission,
+                    led
+                    by the Chinatown Partnership Local Development Corporation (CPLDC), is, “an extension of a longer
+                    history of efforts to establish a CLT in Chinatown…to preserve affordability and authenticity for
+                    the neighborhood.” The collective organizers continue to build a coalition with advocates, such as
+                    CAAAV: Organizing Asian Communities, to bring land into a CLT in Chinatown.
+                    Find out more <b><a href='https://www.nychinatownclt.org/about'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-WQCLT' class='variable-sidebar'>
+              <h4>Western Queens CLT<h4>
+                  <p></p>
+                  <img src='https://wqclt.org/wp-content/uploads/2023/01/wqclt.jpg'>
+                  <p></p>
+                  <p>Founded in 2019, the Western Queens CLT is a collective of activists, small business owners,
+                    professors, artists, students, and community residents demanding, “democratic and equitable land
+                    use
+                    in Western Queens.” The ongoing campaign project for the organization to convert a
+                    600,000-square-foot, publicly owned Department of Education building in Long Island City into a
+                    Community Land Trust. The site, once planned as the Amazon HQ2, was visited by the organization as
+                    well as Bagchee Architects to develop a feasibility study for the project along with thorough
+                    community engagement for local buy-in. The campaign is ongoing. Find out more <b><a
+                        href='https://wqclt.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-Chhaya' class='variable-sidebar'>
+              <h4>Chhaya CDC<h4>
+                  <p></p>
+                  <img src='https://chhayacdc.org/wp-content/uploads/2020/02/chhaya-500x500.png'>
+                  <p></p>
+                  <p>Founded in 2000, Chaaya CDC was established to, “to address the housing and economic needs for
+                    low-income South Asian and Indo-Caribbean New Yorkers.” The organization prioritizes services to
+                    homeowners and tenants to ensure protections and avoid displacement. However, in 2019, the
+                    organization began advocating for the creation of a CLT in Jackson Heights, Queens to, “preserve
+                    community space and commercial affordability for small businesses in Jackson Heights, and to
+                    prevent
+                    home foreclosures.” As of 2023, the project is ongoing. Find out more <b><a
+                        href='https://chhayacdc.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-BKLVLUP' class='variable-sidebar'>
+              <h4>Brooklyn Level Up<h4>
+                  <p></p>
+                  <img src='https://bklvlup.org/wp-content/uploads/2023/03/who_are_our_people-1024x768.jpg'>
+                  <p></p>
+                  <p>Founded in 2020, the stated mission of Brooklyn Level Up is to ensure that, “homes, businesses,
+                    and
+                    community spaces to belong to the people who use them,” within the Flatbush and East Flatbush
+                    neighborhoods of Brooklyn. Further the organization works to maximize BIPOC entrepreneurs' access
+                    to
+                    small business resources and through a community land trust model. While the organization is yet
+                    to
+                    acquire land for the land trust, Brooklyn Level Up continues to advocate for the neighborhoods’
+                    residents. During the pandemic, the organization aided 475 residents/entrepreneurs in navigating
+                    pandemic regulatory changes, creating vaccine access, and easing barriers to government programs
+                    and
+                    services. Find out more <b><a href='https://bklvlup.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-Brownsville' class='variable-sidebar'>
+              <h4>Brownsville CLT<h4>
+                  <p></p>
+                  <img
+                    src='https://bluehubcapital.org/sites/default/files/styles/square_image/public/2021-12/Brownsville.jpg?h=6ce72a6b&itok=Nfi2V5yV'>
+                  <p></p>
+                  <p>Founded in 2008 as a Community Solutions project, the Brownsville Partnership became a separate,
+                    affiliated not-for-profit in 2019. The mission of the Brownsville Partnership is to, “convene
+                    community stakeholders to harness their collective power to advance the health, safety, and
+                    prosperity of the storied Brooklyn neighborhood of Brownsville.” The Partnership also supports the
+                    Brownsville Plan, which is a, “collective strategy for the equitable development of the
+                    neighborhood, through the lens of health, housing, and economic mobility. The Brownsville
+                    Partnership works on several projects such as the Community Action for Healthy Homes, which is a
+                    “survey-fix process” with a goal to improve living conditions for tenants and low-income
+                    homeowners.
+                    One of the most important projects for the Partnership is the development of the Brownsville CLT.
+                    In
+                    2017, the New York City Department of Housing Preservation and Development (HPD) released the
+                    Request for Proposal (RFP) for publicly-owned, vacant lots on Livonia Avenue in Brownsville. After
+                    significant community engagement and leadership from the Brownsville Preservation, a CLT at one of
+                    the planned locations was established to foster community control and ownership. Find out more
+                    <b><a href='https://www.brownsvillepartnership.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-ENYCLT' class='variable-sidebar'>
+              <h4>East New York CLT<h4>
+                  <p></p>
+                  <img
+                    src='https://northstarfund.org/wp-content/uploads/2022/09/east-new-york-community-land-trust_800.jpg.jpeg'>
+                  <p></p>
+                  <p>Founded in 2020, the East New York Community Land Trust’s stated mission is to “protect,
+                    stabilize,
+                    and expand the stock of affordable homes, locally-owned small businesses, and green spaces in East
+                    New York and Brownsville to benefit low to moderate-income BIPOC residents.” Local residents
+                    democratically formed a steering committee to begin envisioning a community land trust for their
+                    neighborhood. While the CLT is yet to own land, they continue to advocate for the conversion of
+                    publicly owned land into the CLT model. For example, the organization launched a Reparative
+                    Justice
+                    Campaign in 2021 to convert all vacant lots along with parking areas controlled by the NYPD into a
+                    community land trust to provide needed, deeply affordable housing along community space. Find out
+                    more <b><a href='https://www.eastnewyorkclt.org/'>here</a></b>.
+                  </p>
+            </div>
+            <div id='variable-sidebar-content-realCLT' class='variable-sidebar'>
+              <h4>ReAL CLT<h4>
+                  <p></p>
+                  <img
+                    src='https://collectiveforcce.com/wp-content/uploads/2022/06/CLT-Future-Open-Space-Lots_VOlivotto-edit2-scaled.jpg'>
+                  <p></p>
+                  <p>Founded in 2020, ReAL Edgemere CLT was formed to, “advocate and create new, permanently
+                    affordable
+                    homeownership opportunities in Edgemere, a BIPOC neighborhood on the Rockaway Peninsula in Queens
+                    that had been devastated by Hurricane Sandy.” After a thorough Request for Expressions of Interest
+                    process via the New York City Department of Housing Preservation and Development (HPD), the CLT
+                    was
+                    chosen to control and redevelop 62 vacant lots in the neighborhood. The organization continues to
+                    organize to ensure residents receive equitable access to city resources following Hurricane Sandy.
+                    Find out more <b><a href='https://changecapitalfund.org/grantee/real-edgemere-clt/'>here</a></b>.
+                  </p>
+
+            </div>
+            <button id='main-button' class='button-52'>
+              <div role="button"> Come Home! </div>
+            </button>
+          </div>
+
+
+        </div>
+        <div id='mapContainer'>
+        </div>
+      </div>
+
+
+    </div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script src="https://kit.fontawesome.com/3a3d8feff0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
