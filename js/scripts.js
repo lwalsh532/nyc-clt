@@ -6,12 +6,12 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     var map = new mapboxgl.Map({
         container: 'mapContainer', // HTML container id
         style: 'mapbox://styles/mapbox/light-v10', // style URL
-        center: NYC_COORDINATES, // starting position as [lng, lat]
+        center: NYC_COORDINATES, // starting position [long,lat] of NYC
         zoom: 9.7
     });
 
 
-    //popups for Gardens
+    // the popup markers w/info for the map along with the fly-to functions of the buttons on the sidebar, inspired by Gardens of Cairo from 2022
     cltLocations.forEach(function (cltLocation) {
         var popup = new mapboxgl.Popup({ offset: 40 })
             .setHTML(`
@@ -138,7 +138,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-realCLT').show();
     });
-    // return to list buttons
+    // come home button
     $('#main-button').on('click', function () {
         map.flyTo({
             center: NYC_COORDINATES,
