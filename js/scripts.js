@@ -139,7 +139,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-realCLT').show();
     });
-    // come home button
+    // come home button for each variable sidebar to reset to city view
     $('#reset-button-1').on('click', function () {
         map.flyTo({
             center: NYC_COORDINATES,
