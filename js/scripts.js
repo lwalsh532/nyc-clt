@@ -252,4 +252,5 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
         $('#main-sidebar-content').show();
         $('.variable-sidebar').hide();
     });
+
 })

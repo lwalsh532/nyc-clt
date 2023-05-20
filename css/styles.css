@@ -87,6 +87,7 @@ a:hover {
     border-right: 1px;
     display: flex;
     flex-direction: column;
+    border-right: 4px solid #7c1b1b;
 }
 
 .sidebar-top {
