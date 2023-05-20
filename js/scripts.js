@@ -16,6 +16,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
         var popup = new mapboxgl.Popup({ offset: 40 })
             .setHTML(`
   <p><b>${cltLocation.CLT_Organization}</b></p>
+          <p><u>Headquarters</u>: <strong>${cltLocation.Address}</strong><p>
           <p><u>Land Status</u>: <strong>${cltLocation.LandStatus}</strong><p>
   `);
         let color = "#7c1b1b"
@@ -29,7 +30,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#NWBCCC').on('click', function () {
         map.flyTo({
             center: [-73.8937, 40.8685],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-NWBCCC').show();
@@ -37,7 +38,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#MMC').on('click', function () {
         map.flyTo({
             center: [-73.8873, 40.84481],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-MMC').show();
@@ -45,7 +46,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#WSNQ').on('click', function () {
         map.flyTo({
             center: [-73.9152, 40.8213],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-WSNQ').show();
@@ -53,7 +54,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#MHPM').on('click', function () {
         map.flyTo({
             center: [-73.8764, 40.82847],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-MHPM').show();
@@ -61,7 +62,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#NMCLT').on('click', function () {
         map.flyTo({
             center: [-73.9209, 40.86959],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-NMCLT').show();
@@ -69,7 +70,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#EBCLT').on('click', function () {
         map.flyTo({
             center: [-73.9346, 40.79668],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-EBCLT').show();
@@ -77,7 +78,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#CSCLT').on('click', function () {
         map.flyTo({
             center: [-73.9908, 40.72688],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-CSCLT').show();
@@ -85,7 +86,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#Chinatown').on('click', function () {
         map.flyTo({
             center: [-73.9986, 40.71322],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-Chinatown').show();
@@ -93,7 +94,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#WQCLT').on('click', function () {
         map.flyTo({
             center: [-73.9216, 40.74679],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-WQCLT').show();
@@ -101,7 +102,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#Chhaya').on('click', function () {
         map.flyTo({
             center: [-73.8887, 40.74796],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-Chhaya').show();
@@ -109,7 +110,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#BKLVLUP').on('click', function () {
         map.flyTo({
             center: [-73.9454, 40.63097],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-BKLVLUP').show();
@@ -117,7 +118,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#Brownsville').on('click', function () {
         map.flyTo({
             center: [-73.91, 40.66747],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-Brownsville').show();
@@ -125,7 +126,7 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#ENYCLT').on('click', function () {
         map.flyTo({
             center: [-73.8852, 40.67966],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-ENYCLT').show();
@@ -133,13 +134,117 @@ $.getJSON('data/cltNYC.json', function (cltLocations) {
     $('#realCLT').on('click', function () {
         map.flyTo({
             center: [-73.77506146, 40.59555008],
-            zoom: 15,
+            zoom: 17.5,
         });
         $('#main-sidebar-content').hide();
         $('#variable-sidebar-content-realCLT').show();
     });
     // come home button
-    $('#main-button').on('click', function () {
+    $('#reset-button-1').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-2').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-3').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-4').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-5').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-6').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-7').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-8').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-9').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-10').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-11').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-12').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-13').on('click', function () {
+        map.flyTo({
+            center: NYC_COORDINATES,
+            zoom: 9.7,
+        });
+        $('#main-sidebar-content').show();
+        $('.variable-sidebar').hide();
+    });
+    $('#reset-button-14').on('click', function () {
         map.flyTo({
             center: NYC_COORDINATES,
             zoom: 9.7,
