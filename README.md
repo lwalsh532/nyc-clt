@@ -16,4 +16,4 @@ I compiled my list of CLTs along with each address manually via the CLTs’ webs
 
 For research, I also utilized the various CLTs’ websites, which are linked within the interactive map, along with the Pratt Center for Community Development’s "<a href='https://prattcenter.net/uploads/0423/1682705700812033/Pratt_Center_Gaining_Ground-042823.pdf'>CLTs Gaining Ground in NYC</a>.”
 
-This list is not comprehensive, nor is my description of each CLT. Rather it is a starting point to further the data storytelling of the grassroots organizing efforts of Community Land Trusts in NYC. Any ideas to improve the map are more than welcome!
+This list is not comprehensive, nor is my description of each CLT. Rather it is a part of the evolving storytelling of the grassroots organizing efforts of Community Land Trusts in NYC. Any ideas to improve the map are more than welcome!
